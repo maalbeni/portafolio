@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+   
+
+
+<head>
+    
+    <meta charset="utf-8" />
+    <title>
+        {% block title %}
+        
+        {% endblock%}
+        | Manuel Bello
+    </title>
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/styles.css' %}">
+
+</head>
+<header class="header">
+    <h1 class="h1">
+        <a href="{% url 'inicio' %}">MANUEL BELLO</a>
+    </h1>
+    <nav>
+        <ul class="ul">
+            <li>
+                <a href="{% url 'inicio' %}">Inicio</a>
+            </li>
+            <li>
+                <a href="{% url 'about' %}">Sobre mi</a>
+            </li>  
+            <li>
+                <a href="{% url 'contact' %}">Contacto</a>
+            </li> 
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+    {% block content %}
+    <!--Codigo que viene de templates-->
+    <strong>Contenido del bloque original</strong>
+    {% endblock %}
+   
+       
+
+    <footer>
+        Creado con Django por Manuel Bello - {% now "d/m/y" %}
+    </footer>
+</body>
+
+
+</html>

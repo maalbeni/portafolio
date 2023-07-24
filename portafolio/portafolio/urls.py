@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from mainapp import views
+from AiChat import views
 
 app_name = 'main'
 
@@ -26,4 +27,5 @@ urlpatterns = [
     path('inicio/', views.index, name="inicio"),
     path('sobre-mi/', views.about, name="about"),
     path("contacto/", views.contact, name="contact"),
+    path("Aichat/", views.chat, name="chat"),
 ]
